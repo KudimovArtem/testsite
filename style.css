@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    margin: 10px;
+}
+.form_title {
+    max-width: 320px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.inp {
+    min-width: 90%;
+    min-height: 50px;
+    margin: auto;
+}
+.form_title p {
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}
+.butt {
+    margin: 10px auto;
+    max-width: 150px;
+    min-height: 50px;
+    cursor: pointer;
+}
+h1 {
+    text-align: center;
+}
