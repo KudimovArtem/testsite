@@ -2,7 +2,7 @@ let wordArr = ["пирог", "роман", "пират", "макет", "беко
 
 let word = wordArr[Math.floor(Math.random() * wordArr.length)];
 let [s1, s2, s3, s4, s5] = word.split("");
-alert(word);
+//alert(word);
 
 let place1 = document.getElementById("sym1");
 let place2 = document.getElementById("sym2");
