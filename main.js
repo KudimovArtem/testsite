@@ -28,7 +28,8 @@ place4.onkeyup = function () {
   if (this.value.length >= 1) place5.focus();
 };
 place5.onkeyup = function () {
-  if (this.value.length >= 1) this.blur();
+  if (this.value.length >= 1) document.getElementById("butt").click();
+  this.blur();
 };
 place6.onkeyup = function () {
   if (this.value.length >= 1) place7.focus();
@@ -43,7 +44,8 @@ place9.onkeyup = function () {
   if (this.value.length >= 1) place10.focus();
 };
 place10.onkeyup = function () {
-  if (this.value.length >= 1) this.blur();
+  if (this.value.length >= 1) document.getElementById("butt").click();
+  this.blur();
 };
 
 function myFunction() {
