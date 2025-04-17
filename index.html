@@ -7,28 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <input type="text" id="sym1">
-        <input type="text" id="sym2">
-        <input type="text" id="sym3">
-        <input type="text" id="sym4">
-        <input type="text" id="sym5">
-    </div>
-    <div>
-        <input type="text" id="sym6">
-        <input type="text" id="sym7">
-        <input type="text" id="sym8">
-        <input type="text" id="sym9">
-        <input type="text" id="sym10">
-    </div>
-    <div>
-        <input type="text" id="sym1">
-        <input type="text" id="sym2">
-        <input type="text" id="sym3">
-        <input type="text" id="sym4">
-        <input type="text" id="sym5">
-    </div>
-    <button id="butt">Проверить</button>
+    <fieldset>
+        <legend>Таблица умножения</legend>
+        <div class="block">
+        <p id="question"></p>
+        <input type="radio" id="answer1" name="answer" value="1"><label for="anwswer1" id="ans1"></label>
+        <input type="radio" id="answer2" name="answer" value="2"><label for="anwswer2" id="ans2"></label>
+        <input type="radio" id="answer3" name="answer" value="3"><label for="anwswer3" id="ans3"></label>
+        </div>
+    </fieldset>
+    <button id="start">Начать игру</button> 
+    <button id="check">Проверить ответ</button> 
     <script src="main.js"></script>
 </body>
 </html>
