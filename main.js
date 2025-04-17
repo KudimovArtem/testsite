@@ -29,7 +29,7 @@ place4.onkeyup = function () {
 };
 place5.onkeyup = function () {
   if (this.value.length >= 1) document.getElementById("butt").click();
-  this.blur();
+  place6.focus();
 };
 place6.onkeyup = function () {
   if (this.value.length >= 1) place7.focus();
