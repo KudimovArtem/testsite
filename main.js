@@ -43,11 +43,7 @@ document.getElementById("start").onclick = showblock;
 document.getElementById("check").onclick = checkResult;
 
 function showblock() {
-  let element = document.querySelector(".block");
-  if (element.classList.contains("show-block")) {
-    element.classList.remove("show-block");
-  } else {
-    element.classList.add("show-block");
-  }
+  document.querySelector(".block").classList.add("show-block");
+  
   getQuest();
 }
