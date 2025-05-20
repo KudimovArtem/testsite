@@ -1,26 +1,35 @@
-div {
-    width: 390px;
-    margin: 10px auto;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-
-}
-input {
-    margin: 10px;
-    width: 50px;
-    height: 50px;
+h1 {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    padding: 20px;
     text-align: center;
-    font-size: 35px;
-    }
-button {
-    width: 350px;
-    height: 50px;
-    margin: 10px auto;
+    margin: 0 auto;
+}
+
+input {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;;
+}
+
+#addBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
     cursor: pointer;
 }
-body {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
+#delBtn {
+    padding: 0 5px;
+    margin-left: 10px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
 }
