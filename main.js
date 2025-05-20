@@ -1,4 +1,3 @@
-"use strict";
 
 let addBtn = document.getElementById("addBtn");
 const inputTask = document.getElementById("inputTask");
