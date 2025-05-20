@@ -33,3 +33,5 @@ function showTask() {
     localStorage.setItem("tasks", JSON.stringify(arrTask));
   });
 }
+
+addBtn.addEventListener("click", addTask);
