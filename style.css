@@ -20,11 +20,27 @@ input {
     border: none;
     cursor: pointer;
 }
+
+#okBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 #delBtn {
     padding: 0 5px;
     margin-left: 10px;
     background-color: red;
-    border: none;
+    border: 1px solid black;
+    cursor: pointer;
+}
+#changeBtn {
+    padding: 0 5px;
+    margin-left: 10px;
+    background-color: yellow;
+    border: 1px solid black;
     cursor: pointer;
 }
 
@@ -33,3 +49,4 @@ ul {
     padding: 0;
     margin-top: 20px;
 }
+
