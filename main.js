@@ -14,23 +14,28 @@ function addTask() {
     inputTask.value = "";
     showTask();
   }
+  localStorage.setItem("tasks", JSON.stringify(arrTask));
+}
+
+function updateTaskIndex() {
+  document.querySelector('#taskList li').forEach((el, index) => 
+    (el.dataset.index = index));
 }
 
 function showTask() {
   taskList.innerHTML = "";
-  arrTask.forEach((el) => {
+  arrTask.forEach((el, index) => {
     let itemTask = document.createElement("li");
     itemTask.innerHTML = `${el} <button id="delBtn">Удалить</button>`;
+    itemTask.dataset.index = index;
     itemTask.querySelector("#delBtn").addEventListener("click", function () {
+      const indexTask = +itemTask.dataset.index;
       itemTask.remove();
-      arrTask.splice(arrTask.indexOf(itemTask.textContent.split(" ")[0]), 1);
-      /*arrTask = arrTask.filter(
-        (el) => el !== itemTask.textContent.split(" ")[0]
-      );*/
+      arrTask.splice(indexTask, 1);
+      updateTaskIndex();   
       localStorage.setItem("tasks", JSON.stringify(arrTask));
     });
-    taskList.appendChild(itemTask);
-    localStorage.setItem("tasks", JSON.stringify(arrTask));
+    taskList.appendChild(itemTask);  
   });
 }
 
