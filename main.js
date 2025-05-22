@@ -1,5 +1,4 @@
-
-let addBtn = document.getElementById("addBtn");
+const addBtn = document.getElementById("addBtn");
 const inputTask = document.getElementById("inputTask");
 const taskList = document.getElementById("taskList");
 
@@ -11,32 +10,59 @@ function addTask() {
   let textTask = inputTask.value.trim();
   if (textTask !== "") {
     arrTask.push(textTask);
+    localStorage.setItem("tasks", JSON.stringify(arrTask));
     inputTask.value = "";
+    console.log(arrTask);
     showTask();
   }
-  localStorage.setItem("tasks", JSON.stringify(arrTask));
 }
 
 function updateTaskIndex() {
-  document.querySelector('#taskList li').forEach((el, index) => 
-    (el.dataset.index = index));
+  document
+    .querySelectorAll("#taskList li")
+    .forEach((el, index) => (el.dataset.index = index));
+}
+
+function delTask(taskIndex) {
+  arrTask.splice(taskIndex, 1);
+  updateTaskIndex();
+  localStorage.setItem("tasks", JSON.stringify(arrTask));
+  showTask();
+}
+
+function changeTask(itemTask, taskIndex) {
+  const oldTask = itemTask.querySelector("#taskText");
+  itemTask.innerHTML = `<input type="text" id="inputField" value="${oldTask.textContent}"> <button id="okBtn">Принять</button>`;
+  const inputField = itemTask.querySelector("#inputField");
+  inputField.focus();
+  itemTask.querySelector("#okBtn").addEventListener("click", function () {
+    const newText = inputField.value.trim();
+    if (newText) {
+      arrTask[taskIndex] = newText;
+      localStorage.setItem("tasks", JSON.stringify(arrTask));
+      showTask();
+    } else {
+      showTask();
+    }
+  });
 }
 
 function showTask() {
   taskList.innerHTML = "";
   arrTask.forEach((el, index) => {
     let itemTask = document.createElement("li");
-    itemTask.innerHTML = `${el} <button id="delBtn">Удалить</button>`;
+    itemTask.innerHTML = `<span id="taskText">${el}</span> <button id="changeBtn">Изменить</button> <button id="delBtn">Удалить</button>`;
     itemTask.dataset.index = index;
+    const taskIndex = +itemTask.dataset.index;
     itemTask.querySelector("#delBtn").addEventListener("click", function () {
-      const indexTask = +itemTask.dataset.index;
-      itemTask.remove();
-      arrTask.splice(indexTask, 1);
-      updateTaskIndex();   
-      localStorage.setItem("tasks", JSON.stringify(arrTask));
+      delTask(taskIndex);
     });
-    taskList.appendChild(itemTask);  
+    itemTask.querySelector("#changeBtn").addEventListener("click", function () {
+      changeTask(itemTask, taskIndex);
+    });
+    taskList.appendChild(itemTask);
   });
 }
 
 addBtn.addEventListener("click", addTask);
+
