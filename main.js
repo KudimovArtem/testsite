@@ -11,7 +11,7 @@ function myFunction() {
   /*place1.addEventListener("input", function () {
     if (this.value.length >= 1) place2.focus();
   });*/
-  let sym1 = document.getElementById(`sym${index + 1}`).value;
+  let sym1 = document.getElementById(`sym${index + 1}`).value.toLocaleLowerCase();
   if (word.includes(sym1) && sym1) {
     if (sym1 == s1) {
       place1.style.backgroundColor = "green";
@@ -26,7 +26,7 @@ function myFunction() {
   /*place2.onkeyup = function () {
     if (this.value.length >= 1) place3.focus();
   };*/
-  let sym2 = document.getElementById(`sym${index + 2}`).value;
+  let sym2 = document.getElementById(`sym${index + 2}`).value.toLocaleLowerCase();
   if (word.includes(sym2) && sym2) {
     if (sym2 == s2) {
       place2.style.backgroundColor = "green";
@@ -41,7 +41,7 @@ function myFunction() {
   /*place3.onkeyup = function () {
     if (this.value.length >= 1) place4.focus();
   };*/
-  let sym3 = document.getElementById(`sym${index + 3}`).value;
+  let sym3 = document.getElementById(`sym${index + 3}`).value.toLocaleLowerCase();
   if (word.includes(sym3) && sym3) {
     if (sym3 == s3) {
       place3.style.backgroundColor = "green";
@@ -56,7 +56,7 @@ function myFunction() {
   /*place4.onkeyup = function () {
     if (this.value.length >= 1) place5.focus();
   };*/
-  let sym4 = document.getElementById(`sym${index + 4}`).value;
+  let sym4 = document.getElementById(`sym${index + 4}`).value.toLocaleLowerCase();
   if (word.includes(sym4) && sym4) {
     if (sym4 == s4) {
       place4.style.backgroundColor = "green";
@@ -71,7 +71,7 @@ function myFunction() {
   /*place5.onkeyup = function () {
     if (this.value.length >= 1) this.blur();
   };*/
-  let sym5 = document.getElementById(`sym${index + 5}`).value;
+  let sym5 = document.getElementById(`sym${index + 5}`).value.toLocaleLowerCase();
   if (word.includes(sym5) && sym5) {
     if (sym5 == s5) {
       place5.style.backgroundColor = "green";
