@@ -1,52 +1,26 @@
-h1 {
-    font-family: Arial, sans-serif;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-}
+div {
+    width: 390px;
+    margin: 10px auto;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
 
+}
 input {
-    width: 70%;
-    padding: 10px;
-    font-size: 16px;;
-}
-
-#addBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 35px;
+    }
+button {
+    width: 350px;
+    height: 50px;
+    margin: 10px auto;
     cursor: pointer;
 }
-
-#okBtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
 }
-#delBtn {
-    padding: 0 5px;
-    margin-left: 10px;
-    background-color: red;
-    border: 1px solid black;
-    cursor: pointer;
-}
-#changeBtn {
-    padding: 0 5px;
-    margin-left: 10px;
-    background-color: yellow;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
